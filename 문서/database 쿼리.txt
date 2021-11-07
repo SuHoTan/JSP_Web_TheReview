@@ -1,0 +1,38 @@
+CREATE DATABASE TheReview #데이터베이스 생성
+USE TheReview # 접속
+
+
+CREATE TABLE REVIEW (
+  reviewID int PRIMARY KEY AUTO_INCREMENT, #리뷰 번호
+  userID varchar(50), #작성자 아이디
+  category varchar(20), #리뷰 구분
+  reviewTitle varchar(100), #리뷰 제목
+  reviewContent varchar(2048), #리뷰 내용
+  totalScore varchar(10), #종합 점수
+  designScore varchar(10), #디자인 점수
+  priceScore varchar(10), #가격 점수
+  etcScore varchar(10), #기타 점수
+  recommendCount int #추천갯수
+);
+
+
+CREATE TABLE USER (
+  userID varchar(30), #작성자 아이디
+  userPassword varchar(40), #작성자 비밀번호
+  userEmail varchar(80), #작성자 이메일
+  userEmailHash varchar(64), #이메일 확인 해시값
+  userEmailChecked boolean #이메일 확인 여부
+);
+
+CREATE TABLE RECOMMEND(
+  userID varchar(50), #작성자 아이디
+  reviewID int, #평가 번호
+  userIP varchar(50) #작성자 아이피
+);
+
+
+CREATE TABLE attach(
+uuid varchar(50) not null,
+  uploadPath varchar(200) not null,
+  reviewID int 
+);

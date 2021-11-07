@@ -1,7 +1,6 @@
+<%@page import="review.ReviewDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="user.UserDAO"%>
-<%@page import="evaluation.*"%>
-<%@page import="likey.LikeyDTO"%>
 <%@page import="java.io.PrintWriter"%>
 <%
 	String userID = null;
@@ -19,13 +18,13 @@
 	}
 	
 	request.setCharacterEncoding("UTF-8");
-	String evaluationID = null;
-	if(request.getParameter("evaluationID") != null) {
-		evaluationID = request.getParameter("evaluationID");
+	String reviewID = null;
+	if(request.getParameter("reviewID") != null) {
+		reviewID = request.getParameter("reviewID");
 	}
-	EvaluationDAO evaluationDAO = new EvaluationDAO();
-	if(userID.equals(evaluationDAO.getUserID(evaluationID))) {
-		int result = new EvaluationDAO().delete(evaluationID);
+	ReviewDAO reviewDAO = new ReviewDAO();
+	if(userID.equals(reviewDAO.getUserID(reviewID))) {
+		int result = new ReviewDAO().delete(reviewID);
 		if(result == 1) {
 		PrintWriter script = response.getWriter();
 		script.println("<script>");

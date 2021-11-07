@@ -1,7 +1,7 @@
+<%@page import="recommend.RecommendDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="user.UserDAO"%>
-<%@page import="evaluation.*"%>
-<%@page import="likey.*"%>
+<%@page import="review.*"%>
 <%@page import="java.io.PrintWriter"%>
 <%!
 	public static String getCilentIP(HttpServletRequest request) {
@@ -34,15 +34,15 @@
 	}
 	
 	request.setCharacterEncoding("UTF-8");
-	String evaluationID = null;
-	if(request.getParameter("evaluationID") != null) {
-		evaluationID = request.getParameter("evaluationID");
+	String reviewID = null;
+	if(request.getParameter("reviewID") != null) {
+		reviewID = request.getParameter("reviewID");
 	}
-	EvaluationDAO evaluationDAO = new EvaluationDAO();
-	LikeyDAO likeyDAO = new LikeyDAO();
-	int result = likeyDAO.like(userID, evaluationID, getCilentIP(request));
+	ReviewDAO reviewDAO = new ReviewDAO();
+	RecommendDAO recommendDAO = new RecommendDAO();
+	int result = recommendDAO.recommend(userID, reviewID, getCilentIP(request));
 	if(result == 1) {
-		result = evaluationDAO.like(evaluationID);
+		result = reviewDAO.recommend(reviewID);
 		if( result == 1) {
 		PrintWriter script = response.getWriter();
 		script.println("<script>");

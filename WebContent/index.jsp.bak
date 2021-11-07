@@ -11,7 +11,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>The Review</title> 
+	<title>강의평가 웹 사이트</title> 
 	<!-- 부트스트랩 CSS 추가하기 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<!-- 커스텀 CSS 추가하기 -->
@@ -127,7 +127,7 @@
 %>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.jsp">The review</a>
+		<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbar">
 			<span class="navbar-toggler-icon"></span>
@@ -379,7 +379,7 @@
 		</div>
 	</div>
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		Copyright &copy;  XXXXXXXXXX All Rights Reserved.
+		Copyright &copy; 2018113576 탄성호 All Rights Reserved.
 	</footer>
 
 

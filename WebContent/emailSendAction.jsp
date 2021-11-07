@@ -39,7 +39,7 @@
 
 	// 사용자에게 보낼 메시지를 기입합니다.
 	String host = "http://localhost:8089/TheReview/";
-	String from = "adbtjdgh@gmail.com";
+	String from = ""; // 이메일을 기입하세요
 	String to = userDAO.getUserEmail(userID);
 	String subject = "강의평가를 위한 이메일 확인 메일입니다.";
 	String content = "다음 링크에 접속하여 이메일 확인을 진행하세요." +
@@ -92,7 +92,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
+		<a class="navbar-brand" href="index.jsp">리뷰사이트</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbar">
 			<span class="navbar-toggler-icon"></span>
@@ -134,7 +134,7 @@
 		</div>
 	</section>
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		Copyright &copy; 2019 곽민성 All Rights Reserved.
+		Copyright &copy; XXXXXXXXXXXXXXXX Rights Reserved.
 	</footer>
 	<!-- 제이쿼리 자바스트립트 추가하기 -->
 	<script src="./js/jquery.min.js"></script>

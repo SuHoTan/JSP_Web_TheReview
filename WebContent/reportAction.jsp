@@ -46,13 +46,14 @@
 		return;
 	}
 	
-	String host = "http://localhost:8181/Lecture_Evaluation/";
+	String host = "http://localhost:8089/TheReview/";
 	String from = userDAO.getUserEmail(userID);
-	String to = "alstjd4770@gmail.com";
-	String subject = "강의평가 사이트에서 접수된 신고  메일입니다.";
-	String content = "신고자: " + userID +
+	String to = "leski@naver.com";
+	String subject = "TheReview 웹사이트 에서 문의가 온 메일입니다. 문의자ID: " + userID;
+	String content = 
 					 "<br>제목: " + reportTitle +
-					 "<br>내용: " + reportContent;
+					 "<br><hr><br>내용: " + reportContent+
+					 "<br><br><br><hr> 문의자ID:"+ userID;
 		
 	// SMTP에 접속하기 위한 정보를 기입합니다.
 	Properties p = new Properties();
@@ -63,6 +64,7 @@
 	p.put("mail.smtp.auth", "true");
 	p.put("mail.smtp.debug", "true");
 	p.put("mail.smtp.socketFactory.port", "465");
+	p.put("mail.smtp.ssl.enable", "true");
 	p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 	p.put("mail.smtp.socketFactory.fallback", "false");
 	try{
@@ -81,7 +83,7 @@
 	    e.printStackTrace();
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('오류가 발생했습니다..');");
+		script.println("alert('오류가 발생했습니다!');");
 		script.println("history.back();");
 		script.println("</script>");
 		script.close();		
@@ -89,7 +91,7 @@
 	}
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
-	script.println("alert('정상적으로 신고했습니다..');");
+	script.println("alert('문의가 정상적으로 보내졌습니다!');");
 	script.println("history.back();");
 	script.println("</script>");
 	script.close();		

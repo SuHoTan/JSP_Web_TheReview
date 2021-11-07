@@ -1,4 +1,4 @@
-package likey;
+package recommend;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,10 +6,11 @@ import java.sql.ResultSet;
 
 import util.DatabaseUtil;
 
-public class LikeyDAO {
+public class RecommendDAO {
 	
-	public int like(String userID, String evaluationID, String userIP) {
-		String SQL = "INSERT INTO LIKEY VALUES (?, ?, ?)";
+	
+	public int recommend(String userID, String reviewID, String userIP) {
+		String SQL = "INSERT INTO RECOMMEND VALUES (?, ?, ?)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -17,7 +18,7 @@ public class LikeyDAO {
 			conn = DatabaseUtil.getConnection();
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userID);
-			pstmt.setString(2, evaluationID);
+			pstmt.setString(2, reviewID);
 			pstmt.setString(3, userIP);
 			return pstmt.executeUpdate();
 		} catch (Exception e) {

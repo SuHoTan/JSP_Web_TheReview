@@ -1,0 +1,89 @@
+﻿## JSP기반 리뷰 웹사이트 - 1인 Toy 프로젝트
+
+JSP, JQuery, HTML을 기반으로 작성한 상품에 대한 리뷰를 남기는 게시판 
+CRUD 프로젝트입니다. 
+
+<p><img src="md/5.PNG" alt="Alt"></p>
+
+대학교 재학시절 학습용도로 JSP 1 모델구조를 이용하여 구현하였습니다.
+
+
+
+
+
+## 1. 개발환경
+<blockquote> 
+<p> 언어</p>
+</blockquote>
+<ul>
+<li>Java 8</li>
+</ul>
+<blockquote> 
+<p> 프레임워크 & 라이브러리</p>
+</blockquote>
+<ul>
+<li>Bootstrap 3</li>
+<li>JQuery3</li>
+<li>Mysql 5.7</li>
+<li>Mail.jar </li>
+</ul>
+<blockquote> 
+<p> IDE</p>
+</blockquote>
+<ul>
+<li>Eclipse</li>
+</ul>
+
+## 2. 패키지 구조 & DB 구조
+<p><img src="md/1.PNG" alt="Alt"></p>
+<p><img src="md/2.PNG" alt="Alt"></p>
+
+<hr>
+<p><img src="md/3.PNG" alt="Alt"></p>
+<p><img src="md/4.PNG" alt="Alt"></p>
+
+
+## 3.  구조설계  & 기능목록
+<p><img src="md/6.PNG" alt="Alt"></p>
+<hr>
+<p><img src="md/7.PNG" alt="Alt"></p>
+
+
+
+## 4.  구현기능 화면
+
+### 1. 관리자 문의기능
+<p><img src="md/8.PNG" alt="Alt"></p>
+
+문의할 제목과 내용을 입력하고 전송을 클릭하면 해당 문의가 관리자의 이메일로 전송됩니다.
+
+### 2. 회원가입 & 메일인증
+<p><img src="md/9.PNG" alt="Alt"></p>
+
+회원가입을 통해
+
+### 3. 리뷰게시판
+<p><img src="md/10.PNG" alt="Alt"></p>
+
+리뷰 게시판에서 
+
+1. 글쓰기 버튼을 클릭 시 리뷰를 등록할 수 있습니다.
+2. 삭제를 클릭 시 게시물을 삭제할 수 있습니다.
+3. 추천을 클릭 시 게시물을 추천할 수 있습니다.
+
+
+## 5. 한계점 & 추후개발 과제
+- 이미지 업로드 기능 완성
+게시판의 이미지 업로드 기능에 오류가 발생하여, 제출한 파일에 이미지 업로드 기능이 제대로 동작하지 않는다. 이 부분이 제대로 동작하기 위해서 추가 기능구현 필요하다.
+- 페이징 기능 보안
+현재 페이징기능은 다섯 개의 게시물을 기준으로 이전, 다음 버튼을 이용하여 페이징 처리를 한다. 훨씬 이전에 쓴 글도 손쉽게 확인하기 위해서페이징 기능의 개선을 할 계획에 있다.
+- 디자인 개선
+
+
+
+
+## 6. 참고한 자료
+
+-  [JSP Programming (답변형 게시판과 회원가입을 단계적으로 개발하며 배우는)](https://book.naver.com/bookdb/book_detail.naver?bid=8161645)
+- <a href="https://ndb796.tistory.com/43">ndb796 tistory<a/>
+- Kwak Min-sung GitHub Repository

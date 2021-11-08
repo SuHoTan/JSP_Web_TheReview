@@ -16,7 +16,7 @@ CRUD 프로젝트입니다.
 <p> 언어</p>
 </blockquote>
 <ul>
-<li>Java 8</li>
+<li>JSP (java 8)</li>
 </ul>
 <blockquote> 
 <p> 프레임워크 & 라이브러리</p>
